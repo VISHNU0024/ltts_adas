@@ -2,6 +2,9 @@ name: Publish Docker images
 # on:
 #   release:
 #     types: [published]
+# on:
+#   release:
+#     types: [published]
 on:
   push:
     branches:
