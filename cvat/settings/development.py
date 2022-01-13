@@ -28,17 +28,23 @@ SENDFILE_BACKEND = 'sendfile.backends.development'
 #     'PORT': 27017,
 #     }
 # }
+# DATABASES = {
+#    'default': {
+#    'ENGINE': 'djongo',
+#    'NAME': 'new_adas',
+#    'ENFORCE_SCHEMA':False,
+#    'CLIENT':{
+#        'host':'mongodb://admin:pass@local:27017/admin?authSource=admin'
+# }
+# }
+# }
+# ALLOWED_HOSTS=['*']
 DATABASES = {
-   'default': {
-   'ENGINE': 'djongo',
-   'NAME': 'new_adas',
-   'ENFORCE_SCHEMA':False,
-   'CLIENT':{
-       'host':'mongodb://admin:pass@local:27017/admin?authSource=admin'
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
-}
-}
-ALLOWED_HOSTS=['*']
 
 
 
